@@ -337,6 +337,12 @@ footer a:hover {
 	line-height: 1.1;
 }
 
+/* Blog styling */
+
+/* .blog-card {
+	border: 1px solid white;
+} */
+
 /* SM - max-width in pixels approximately 768px */
 @media (max-width: 48em) {
 	.hide-sm {
