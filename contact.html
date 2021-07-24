@@ -1,6 +1,35 @@
 ---
 layout: default 
 title: Contact Design Collective
+banner_image: /images/plant.jpg
 ---
 
-<section>Contact</section>
+<!-- Header Banner -->
+
+<section class="tall-60 grid bg-green">
+  <div class="col-6 bg-image" style="background-image: url('{{page.banner_image}}');"></div>
+  <div class="col-6-middle editable padded" style="color: black;">
+    <h2>Get in Touch</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
+      laudantium inventore cum commodi magnam repudiandae! Consequatur 
+    </p>
+  </div>   
+</section>
+
+<section class="padded center contact-section">
+  <div class="grid-center editable">
+  <h2 class="margin-b-1 col-12">The Personal Touch</h2>
+  <p class="col-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus nihil assumenda nostrum. Repellat eius fuga aspernatur ab aut officia dolor deleniti placeat non magnam animi, est aliquam quo rerum earum?</p>
+  </div>
+ <form class="capped-width editable">
+  
+  <input type="text" placeholder="Name" name="_name" id="_name" class="margin-b-1" />
+  
+  <input type="email" name="_replyto" id="_replyto" placeholder="Email" class="margin-b-1" > 
+
+  <textarea name="_text" id="_text" placeholder="Type your message here..." class="margin-b-1" rows="5" ></textarea>
+  <button type="submit">Submit</button>
+</form>
+  
+</section>

@@ -5,7 +5,7 @@ title: The Design Collective
 
 <!-- Main Header Banner -->
 		<section class="bg-image bg-plant padded tall-70 grid-middle">
-			<div class="col-8_sm-10">
+			<div class="col-8_sm-10 editable">
 				<h2>Website design & development that grows with your business</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
@@ -16,10 +16,7 @@ title: The Design Collective
 			</div>
 		</section>
 
-		<!-- CTA -->
-		<section class="padded-2 center light-text bg-dark">
-			<p>Sign up to our newsletter to access free design resources. -></p>
-		</section>
+	{% include newsletter-signup.html %}
 
 		<!-- Why us section -->
 		<section class="grid padded center" id="why-us">
@@ -77,7 +74,7 @@ title: The Design Collective
 		</section>
 
 		<!-- CTA -->
-		<section class="padded center light-text bg-dark">
+		<section class="padded center light-text bg-dark editable">
 			<h3>We have a community of over 3500 entrepreneurs</h3>
 			<a href="#" class="button">Join the Facebook community</a>
 		</section>
@@ -88,7 +85,7 @@ title: The Design Collective
 			class="bg-image bg-plant-2 center grid-right padded tall-70 grid-middle"
 			id="services"
 		>
-			<div class="col-6_sm-8-middle right">
+			<div class="col-6_sm-8-middle right editable">
 				<h2>Website design & development that grows with your business</h2>
 				<p>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem,
@@ -132,43 +129,26 @@ title: The Design Collective
 		<!-- Projects -->
 		<section class="bg-rust padded projects" id="projects">
 			<h2 class="center">Recent Projects</h2>
-			<div class="grid">
+
+      {% for project in site.projects limit: 2 %}
+
+			<div class="grid flex-flip">
 				<div class="col-5_sm-12-middle padded">
-					<h3>Zen Studio Website</h3>
+					<h3>{{project.title}}</h3>
 					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas unde
-						quia explicabo illum, adipisci beatae nemo consectetur repellat
-						ratione eius, repudiandae architecto eaque placeat velit cum, sint
-						odit consequuntur ad?
+						{{project.description}}
 					</p>
-					<a href="#" class="button"> Go to site </a>
+					<a href="{{project.live_url}}" class="button" target="_blank"> Go to site </a>
 				</div>
 
 				<div class="col-7_sm-12-middle padded">
 					<img
-						src="/images/placeholder-project.png"
+						src="{{project.featured_image}}"
 						alt="project name by the collective"
 					/>
 				</div>
 			</div>
 
-			<div class="grid flex-flip-sm">
-				<div class="col-7_sm-12-middle padded">
-					<img
-						src="/images/placeholder-project.png"
-						alt="project name by the collective"
-					/>
-				</div>
+      {% endfor %}
 
-				<div class="col-5_sm-12-middle padded">
-					<h3>Another Website Name</h3>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas unde
-						quia explicabo illum, adipisci beatae nemo consectetur repellat
-						ratione eius, repudiandae architecto eaque placeat velit cum, sint
-						odit consequuntur ad?
-					</p>
-					<a href="#" class="button"> Go to site </a>
-				</div>
-			</div>
 		</section>
