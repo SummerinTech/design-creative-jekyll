@@ -37,16 +37,28 @@
 <body>
 
  <header class="grid">
-			<div class="col-6_sm-12-middle padded-0 center-sm">
+			<div class="col-6_sm-9-middle padded-0">
 				<h1>The Design Collective</h1>
 			</div>
-			<nav class="col-6_sm-12-middle right padded-0 center-sm">
+			<nav class="col-6_sm-12-middle right padded-0 hide-sm">
 				<a href="/">Home</a>
 				<a href="/about.html">About</a>
 				<a href="/services.html">Services</a>
 				<a href="/portfolio.html">Portfolio</a>
 				<a href="/contact.html">Contact</a>
 			</nav>
+
+			<i class="fas fa-bars hamburger col-3-middle right show-sm"></i>
+
+			<div class="show-sm mobile-menu col-12">
+				<nav class="nav-mobile padded-1">
+					<a href="/">Home</a>
+					<a href="/about.html">About</a>
+					<a href="/services.html">Services</a>
+					<a href="/portfolio.html">Portfolio</a>
+					<a href="/contact.html">Contact</a>
+				</nav>
+			</div>
 		</header>
 
     {{content}}
@@ -76,7 +88,12 @@
 		</footer>
 		<div class="bg-dark padded-1">
 			<p class="light-text center">Copyright 2021</p>
-		</div>   
+		</div>  
+
+		<!-- jQuery link -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<!-- Javascript file link -->
+<script src="/script.js"></script>		
 </body>
 
 </html>

@@ -282,11 +282,23 @@ form button:hover {
 	opacity: 0.9;
 }
 
+
 /* Header & Footer  */
 
 header {
 	padding: 2% 5%;
 }
+
+i::before {
+    font-size: 2rem;
+		display: none;
+		cursor: pointer;
+}
+
+.nav-mobile {
+	display:none
+}
+
 
 footer a:hover {
 	color: #d3b4a2;
@@ -343,10 +355,18 @@ footer a:hover {
 	border: 1px solid white;
 } */
 
+.show-sm {
+	display: none;
+}
+
 /* SM - max-width in pixels approximately 768px */
 @media (max-width: 48em) {
 	.hide-sm {
 		display: none;
+	}
+
+	.show-sm {
+		display: block;
 	}
 
 	.center-sm {
@@ -356,6 +376,26 @@ footer a:hover {
 	.flex-flip-sm {
 		flex-direction: column-reverse;
 	}
+
+	/* Fontawesome hamburger */
+	i::before {
+    display: block;
+	  position: relative;
+    top: .3rem;
+}
+
+.mobile-menu {
+	background-color: rust #c29880;
+}
+
+.nav-mobile {
+		text-align: center;
+}
+
+.nav-mobile a {
+	display: block;
+	font-size: 1.5rem;
+}
 
 	.bg-plant {
 		background-image: url("/images/plant-light.png");
