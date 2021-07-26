@@ -9,7 +9,8 @@ title: Design Collective Portfolio
   <p class="hide-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis iusto cupiditate ut facilis, aliquam obcaecati aspernatur commodi nemo eius hic eaque, cumque laboriosam porro labore. Minima voluptas nesciunt quam velit.</p>
   </div>
 
-  {% for project in site.projects limit: 5 offset: 1 %}
+  {% for project in site.projects limit: 4 offset: 1 %}
+
   <div class="col-7_sm-12-middle padded">
     <div class="bg-image landscape" style="background-image: url('{{project.featured_image}}');"></div>
   </div>
@@ -29,6 +30,7 @@ title: Design Collective Portfolio
   <h2 class="center margin-b-1">Featured Project</h2>
 
   <div class="capped-width">
+    
   {% for project in site.projects limit: 1 %}
 
   <div class="bg-image landscape padded" style="background-image: url('{{project.featured_image}}');"></div>

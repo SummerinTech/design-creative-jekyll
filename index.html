@@ -1,6 +1,27 @@
 ---
 layout: default
 title: The Design Collective
+reasons: 
+  - icon_image: /images/icons/flash.png
+    reason: Lighting Fast
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cumque asperiores a voluptates laboriosam quidem excepturi consectetur.
+  - icon_image: /images/icons/idea-2.svg
+    reason: Strategic Perspective
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cumque asperiores a voluptates laboriosam quidem excepturi consectetur.
+  - icon_image: /images/icons/seo-tag.png
+    reason: Optimized for Google
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cumque asperiores a voluptates laboriosam quidem excepturi consectetur.
+  - icon_image: /images/icons/dollar.svg
+    reason: Modern E-Commerce
+    description: Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cumque asperiores a voluptates laboriosam quidem excepturi consectetur.
+
+services: 
+  - service: Design.
+    description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nobis quod voluptatibus earum, sit blanditiis reiciendis aperiam sequi animi a! Voluptas eum a natus dicta, amet odio neque aut temporibus?
+  - service: Build.
+    description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nobis quod voluptatibus earum, sit blanditiis reiciendis aperiam sequi animi a! Voluptas eum a natus dicta, amet odio neque aut temporibus?  
+  - service: SEO.
+    description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nobis quod voluptatibus earum, sit blanditiis reiciendis aperiam sequi animi a! Voluptas eum a natus dicta, amet odio neque aut temporibus? 
 ---
 
 <!-- Main Header Banner -->
@@ -23,15 +44,20 @@ title: The Design Collective
 			<div class="col-12 center editable">
 				<h3 class="margin-b-2">Why Choose Us</h3>
 			</div>
+
+			{% for item in page.reasons %}
+
 			<div class="col-3_sm-6_xs-12 editable">
-				<img src="/images/icons/flash.png" class="icon margin-b-1" />
-				<p><strong>Lighting Fast</strong></p>
+				<img src="{{item.icon_image}}" class="icon margin-b-1" />
+				<p><strong>{{item.reason}}</strong></p>
 				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cumque
-					asperiores a voluptates laboriosam quidem excepturi consectetur.
+					{{item.description}}
 				</p>
 			</div>
-			<div class="col-3_sm-6_xs-12 editable">
+
+			{% endfor %}
+
+			<!-- <div class="col-3_sm-6_xs-12 editable">
 				<img src="/images/icons/idea-2.svg" class="icon margin-b-1" />
 				<p><strong>Strategic Perspective</strong></p>
 				<p>
@@ -54,7 +80,7 @@ title: The Design Collective
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. At, cumque
 					asperiores a voluptates laboriosam quidem excepturi consectetur.
 				</p>
-			</div>
+			</div> -->
 		</section>
 
 		<section class="bg-green padded grid agency center-sm">
@@ -98,32 +124,16 @@ title: The Design Collective
 
 		<!-- Services grid -->
 		<section class="grid-middle-center padded center-sm">
+
+			{% for item in page.services %}
 			<div class="col-4_xs-12-middle padded editable">
-				<h3>Design.</h3>
+				<h3>{{item.service}}</h3>
 				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nobis
-					quod voluptatibus earum, sit blanditiis reiciendis aperiam sequi animi
-					a! Voluptas eum a natus dicta, amet odio neque aut temporibus?
+				{{item.description}}
 				</p>
 			</div>
 
-			<div class="col-4_xs-12-middle padded editable">
-				<h3>Build.</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nobis
-					quod voluptatibus earum, sit blanditiis reiciendis aperiam sequi animi
-					a! Voluptas eum a natus dicta, amet odio neque aut temporibus?
-				</p>
-			</div>
-
-			<div class="col-4_xs-12-middle padded editable">
-				<h3>SEO.</h3>
-				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et nobis
-					quod voluptatibus earum, sit blanditiis reiciendis aperiam sequi animi
-					a! Voluptas eum a natus dicta, amet odio neque aut temporibus?
-				</p>
-			</div>
+			{% endfor %}
 		</section>
 
 		<!-- Projects -->
